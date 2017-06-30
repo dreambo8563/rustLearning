@@ -12,7 +12,7 @@ pub mod outermost {
         pub fn secret_function() {}
     }
 }
-
+// another comments
 pub fn try_me() {
     outermost::middle_function();
     outermost::middle_secret_function();
