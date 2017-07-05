@@ -5,10 +5,10 @@ use std::process;
 use std::io::{self, Write};
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
+
     let stderr = io::stderr();
 
-    let config = greprs::Config::new(&args).unwrap_or_else(|err| {
+    let config = greprs::Config::new(env::args()).unwrap_or_else(|err| {
         stderr
             .lock()
             .write_fmt(format_args!("Problem parsing arguments: {}", err))
