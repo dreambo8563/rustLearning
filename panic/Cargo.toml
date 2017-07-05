@@ -1,0 +1,8 @@
+[package]
+name = "panic"
+version = "0.1.0"
+authors = ["dreambo8563 <dreambo8563@outlook.com>"]
+
+[dependencies]
+[profile.release]
+panic='abort'
